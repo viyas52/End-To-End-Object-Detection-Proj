@@ -4,13 +4,13 @@
 ## How to run:
 ### steps :
 
---> clone the repository
+--> Clone the repository
 
 ```bash
 https://github.com/viyas52/End-To-End-Object-Detection-Proj.git
 ```
 
---> create a conda environment and activate it
+--> Create a conda environment and activate it
 
 ```bash
 conda create -n ETESL python=3.7 -y
@@ -20,4 +20,9 @@ conda create -n ETESL python=3.7 -y
 conda activate ETESL
 ```
 
---> install the requirements
+--> Install the requirements
+
+```bash
+pip install -r requirements.txt
+```
+
