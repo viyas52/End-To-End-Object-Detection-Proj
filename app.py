@@ -38,11 +38,12 @@ def predictRoute():
         image = request.json['image']
         decodeImage(image, clApp.filename)
 
-        os.system("cd yolov5/ && python detect.py --weights my_model.pt --img 416 --conf 0.5 --source ../data/inputImage.jpg")
+        os.system('cd yolov5 && python detect.py --weights "my_model.pt" --img 416 --conf 0.5 --source "../data/inputImage.jpg"')
+
 
         opencodedbase64 = encodeImageIntoBase64("yolov5/runs/detect/exp/inputImage.jpg")
         result = {"image": opencodedbase64.decode('utf-8')}
-        os.system("rm -rf yolov5/runs")
+        os.system("rmdir /s /q yolov5\\runs")
 
     except ValueError as val:
         print(val)
@@ -63,7 +64,7 @@ def predictRoute():
 def predictLive():
     try:
         os.system("cd yolov5/ && python detect.py --weights my_model.pt --img 416 --conf 0.5 --source 0")
-        os.system("rm -rf yolov5/runs")
+        os.system("rmdir /s /q yolov5\\runs")
         return "Camera starting!!" 
 
     except ValueError as val:
@@ -75,4 +76,4 @@ def predictLive():
 
 if __name__ == "__main__":
     clApp = ClientApp()
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080,debug=True)
