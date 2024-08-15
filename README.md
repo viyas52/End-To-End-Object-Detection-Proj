@@ -1,4 +1,4 @@
-# End-To-End-Object-Detection-Proj
+# End-To-End-Sign-Language-Proj
 
 
 ## How to run:
