@@ -7,13 +7,13 @@
 --> Clone the repository
 
 ```bash
-https://github.com/viyas52/End-To-End-Object-Detection-Proj.git
+https://github.com/viyas52/End-To-End-Sign-Language-Proj.git
 ```
 
 --> Create a conda environment and activate it
 
 ```bash
-conda create -n ETESL python=3.7 -y
+conda create -n ETESL python=3.8 -y
 ```
 
 ```bash
@@ -26,3 +26,9 @@ conda activate ETESL
 pip install -r requirements.txt
 ```
 
+
+--> To run the application, type this in the terminal
+
+```bash
+python app.py
+```
